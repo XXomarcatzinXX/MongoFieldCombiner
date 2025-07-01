@@ -46,7 +46,7 @@ async function run() {
                     if (!(key in target)) target[key] = [];
                 } else if (typeof obj[key] === 'object') {
                     if (!(key in target)) target[key] = {};
-                    mergeFields(obj[key], target[key]); // Recursivamente
+                    mergeFields(obj[key], target[key])
                 } else {
                     if (!(key in target)) target[key] = obj[key];
                 }
