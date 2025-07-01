@@ -1,0 +1,89 @@
+{
+  "_id": {
+    "buffer": {
+      "type": "Buffer",
+      "data": []
+    }
+  },
+  "automaticAsignation": true,
+  "calendar": 2021,
+  "center": "tds",
+  "comments": "Incidencia Automática de Amortizacion",
+  "companiesRecord": "-KkR_Gp2yqqc_G_31V7J",
+  "date": 1633064400000,
+  "employee": "-KxrwXDMl264vsrzyeI2",
+  "from": {
+    "loan": "-MbiXV9IVd8sbdzTtqh8"
+  },
+  "incidenceType": "-Lh1NzglRaGg_O4T-aIQ",
+  "nature": "deduction",
+  "notCreated": true,
+  "payroll": "-KxidsCyg6hWUPlYhvuV",
+  "period": 19,
+  "process": false,
+  "queueTime": 1644728928929,
+  "rp": "-KkR_aO5VjCKoTEmHbdX",
+  "status": 3,
+  "type": "system",
+  "updated": {
+    "atTime": 1638158482806,
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "fromIP": "45.231.169.206",
+    "onBehalfOf": "tds",
+    "logged": false
+  },
+  "value": 1200,
+  "fid": "-MbiXVmsToO7O011Zxym",
+  "created": {
+    "atTime": 1629854693541,
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "fromIP": "45.231.169.206",
+    "onBehalfOf": "tds",
+    "logged": false,
+    "comment": "By import"
+  },
+  "operationType": "settlement",
+  "settlement": "-Mhuu44cG9iL1gCiUk0b",
+  "settedByFixes": true,
+  "natureName": "Percepción",
+  "closeOn": "ordinary",
+  "request": "-Mb25q9hIs4iY-G3kpud",
+  "settedByFixesComp": true,
+  "special": "-MkhT_PMi-rMMIpLY3-9",
+  "phantomDate": 1583038800000,
+  "affect": "salary",
+  "internalCode": "P033C_IM",
+  "satAffect": "salary",
+  "satIncidencesType": "001",
+  "satNature": "perception",
+  "confirmed": {
+    "atTime": 1626188076409,
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "fromIP": "45.231.169.206",
+    "onBehalfOf": "tds",
+    "logged": false
+  },
+  "file": "https://firebasestorage.googleapis.com/v0/b/tds-online.appspot.com/o/incidences%2F-MeR8Ss1_3zRceAGU7-N%2Ffile.pdf?alt=media&token=265ef187-c5a0-4692-bd21-60cbbb5aad79",
+  "folio": "MD103527",
+  "ordinary": "-Mbl9_0xkd0vy7brC2KD",
+  "advAndLoanOpe": "-MnRFV7uLrvfdtV7plSh",
+  "asimilated": "-MjZnt1uueUgtvYl7Gk-",
+  "directive": "001DRF",
+  "isRejected": true,
+  "bySystem": true,
+  "chrisBonusRecord": "-Mo79WyCF8bIG0V75aQd",
+  "extraordinary": "-MqzioJevOieR-snH-sa",
+  "a": "a",
+  "payrollCalendar": 2022,
+  "ptuRecord": "-N0WMowL6P11puuSQjof",
+  "dummy": "dummy",
+  "incapacityType": "initial",
+  "startDate": 1654750800000,
+  "travelExpensesOpe": "-NEwZvXshLpTRxCbbz7W",
+  "extra": {
+    "calendar": 2022
+  },
+  "byAsstCtrl": true,
+  "byGeo": true,
+  "ptuDistributionRecord": "-OMrsfQvmvEztDZmkuGF"
+}

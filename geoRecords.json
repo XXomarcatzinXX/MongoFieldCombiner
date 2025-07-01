@@ -1,0 +1,18 @@
+{
+  "initDate": 1728622800000,
+  "endDate": 1729832400000,
+  "numberIncidence": 16,
+  "period": 20,
+  "idsIncidences": [],
+  "payroll": "-Kxj4s39ATjHzdZq8aIj",
+  "calendar": 2024,
+  "nextIncidencesMap": {},
+  "created": {
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "onBehalfOf": "tds",
+    "atTime": 1730123969466,
+    "fromIP": "45.231.169.206"
+  },
+  "uid": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+  "center": "tds"
+}

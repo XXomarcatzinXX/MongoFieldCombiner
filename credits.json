@@ -1,0 +1,50 @@
+{
+  "_id": {
+    "buffer": {
+      "type": "Buffer",
+      "data": []
+    }
+  },
+  "c": "c",
+  "cc": "-KxDlJEuGsWB1Og7eoZQ",
+  "center": "tds",
+  "created": {
+    "atTime": 1508871523215,
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "fromIP": "189.203.136.24",
+    "logged": true,
+    "onBehalfOf": "tds",
+    "bySystem": true
+  },
+  "data": {
+    "account": "2310054850",
+    "comments": "FACTOR EBA JUL-AGO 2017//ACTUALIZAR FACTOR EN HUMANSITE A PARTIR DE 01SEPL2017",
+    "date": 1408165200000,
+    "factor": 31.4336,
+    "name": "REYES ACEVEDO LOURDES",
+    "nss": "65916613469",
+    "sbc": 125.49,
+    "sd": 120.06,
+    "sdr": 433.33334,
+    "type": "vsm",
+    "newFactor": 3585.47,
+    "untilDate": 1734818610401,
+    "lastCreditDate": 1604379600000,
+    "diffFactor": true
+  },
+  "employee": "-KxDoxYM6Bjo5FwiJ8Y6",
+  "payroll": "-KxDkIv21Zod4KKym35a",
+  "queueTime": 1645019075442,
+  "rp": "-KvbxliUdQVC0sXxqBkg",
+  "updated": {
+    "atTime": 1601012178559,
+    "by": "SYSTEM",
+    "fromIP": "::1",
+    "onBehalfOf": "TDS",
+    "byFixes": 1733758952543
+  },
+  "valid": false,
+  "fid": "-KxEk3h2SVUadPG5-BGz",
+  "import": "-KyOSwF5kLmXB9TtuA99",
+  "lastCreditDate": 1579582800000
+}

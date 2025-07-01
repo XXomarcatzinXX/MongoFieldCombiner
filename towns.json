@@ -1,0 +1,20 @@
+{
+  "_id": {
+    "buffer": {
+      "type": "Buffer",
+      "data": []
+    }
+  },
+  "name": "ALVARO OBREGON",
+  "town_id": "001",
+  "state_id": "5818c76c43d0d31cb41d9ede",
+  "humansiteCode": 1,
+  "created": {
+    "by": "gva3RWFZfMZjhPrHmXqWHkhoAD73",
+    "onBehalfOf": "tds",
+    "atTime": 1734125072822,
+    "fromIP": "45.231.169.206"
+  },
+  "uid": "gva3RWFZfMZjhPrHmXqWHkhoAD73",
+  "center": "tds"
+}
