@@ -1,80 +1,95 @@
 const mongoose = require('mongoose');
-const axios = require('axios'); // Asegúrate de tener axios instalado: npm install axios
+const axios = require('axios');
+const isEqual = require('lodash.isequal'); // Asegúrate de instalar: npm install lodash.isequal
 
-const conexion1 = 'mongodb://localhost:27017/tds_restaurada_origen'; // Renombré para mayor claridad
-const conexion2 = 'mongodb://localhost:27017/tds_restaurada_destino'; // Renombré para mayor claridad
-const collection = 'employees';
-const nestJsApiUrl = 'http://localhost:3002/employees/testSchemas'; // Asegúrate de usar 'http://'
+const conexion1 = 'mongodb://localhost:27017/tds_restaurada';
+const conexion2 = 'mongodb://localhost:27017/tds_replica';
+const collection = 'calculations';
+const nestJsApiUrl = 'http://localhost:3002/employees/testSchemas';
 const accessToken = 'ZN7IM9ME83ZPL9JK';
+const BATCH_SIZE = 70;
+
+function cleanDocs(docs) {
+    return docs.map(doc => {
+        const { _id, ...rest } = doc;
+        return rest;
+    });
+}
 
 async function run() {
     let conn1Docs = [];
     let conn2Docs = [];
 
     try {
-        console.log('✨ Conectando a la base de datos de origen (conexion1)...');
-        // Conectar a la primera base de datos y obtener los documentos
+        // Conexión a la base de datos de origen
+        console.log('✨ Conectando a la base de datos de origen...');
         await mongoose.connect(conexion1, { useNewUrlParser: true, useUnifiedTopology: true });
         const db1 = mongoose.connection.db;
         conn1Docs = await db1.collection(collection).find({}).toArray();
-        console.log(`✅ Se encontraron ${conn1Docs.length} documentos en la colección '${collection}' de conexion1.`);
+        console.log(`✅ ${conn1Docs.length} documentos encontrados en '${collection}' en conexion1.`);
         await mongoose.disconnect();
-        console.log('🔌 Desconectado de conexion1.');
 
-        console.log('🚀 Enviando datos a la API de NestJS...');
-        // Enviar los documentos a la API de NestJS
-        // Iteramos sobre los documentos para enviarlos uno por uno,
-        // o puedes enviar un arreglo completo si tu API lo soporta.
-        // Aquí asumimos que tu API puede manejar un array de objetos.
-        await axios.post(`${nestJsApiUrl}/?accessToken=${accessToken}`, conn1Docs);
-        console.log('✅ Datos enviados exitosamente a la API de NestJS.');
+        // Envío por lotes a la API
+        console.log('🚀 Enviando documentos a la API NestJS...');
+        for (let i = 0; i < conn1Docs.length; i += BATCH_SIZE) {
+            const batch = conn1Docs.slice(i, i + BATCH_SIZE);
+            console.log(`📦 Enviando lote ${Math.floor(i / BATCH_SIZE) + 1} de ${Math.ceil(conn1Docs.length / BATCH_SIZE)}...`);
+            try {
+                await axios.post(`${nestJsApiUrl}/?accessToken=${accessToken}`, batch, {
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                console.log(`✅ Lote ${Math.floor(i / BATCH_SIZE) + 1} enviado exitosamente.`);
+            } catch (error) {
+                console.error(`❌ Error en el lote ${Math.floor(i / BATCH_SIZE) + 1}: ${error.message}`);
+                if (axios.isAxiosError(error) && error.response) {
+                    console.error('Detalles de error:', error.response.data);
+                    console.error('Código de estado:', error.response.status);
+                }
+                throw error;
+            }
+        }
 
-        console.log('✨ Conectando a la base de datos de destino (conexion2) para verificar...');
-        // Conectar a la segunda base de datos y obtener los documentos después de la operación de NestJS
+        // Conexión a la base de datos de destino
+        console.log('✨ Conectando a la base de datos de destino...');
         await mongoose.connect(conexion2, { useNewUrlParser: true, useUnifiedTopology: true });
         const db2 = mongoose.connection.db;
         conn2Docs = await db2.collection(collection).find({}).toArray();
-        console.log(`✅ Se encontraron ${conn2Docs.length} documentos en la colección '${collection}' de conexion2.`);
+        console.log(`✅ ${conn2Docs.length} documentos encontrados en '${collection}' en conexion2.`);
         await mongoose.disconnect();
-        console.log('🔌 Desconectado de conexion2.');
 
-        console.log('🔎 Comparando los documentos de ambas conexiones...');
-        // Comparar los documentos
-        if (conn1Docs.length === conn2Docs.length) {
-            let sonIguales = true;
-            // Para una comparación profunda, podrías necesitar una librería como 'lodash.isequal'
-            // o implementar una lógica de comparación más robusta si el orden o la estructura varían.
-            // Por simplicidad, aquí haremos una verificación básica de longitud y un vistazo a los IDs si existen.
+        // Comparación profunda de documentos
+        console.log('🔍 Comparando documentos...');
+        const cleaned1 = cleanDocs(conn1Docs);
+        const cleaned2 = cleanDocs(conn2Docs);
 
-            // Una forma simple de comparar es ordenar y luego convertir a string (si los objetos son simples).
-            // Para objetos complejos y desordenados, necesitas una comparación profunda.
-            const sortedConn1Docs = conn1Docs.map(doc => JSON.stringify(doc)).sort();
-            const sortedConn2Docs = conn2Docs.map(doc => JSON.stringify(doc)).sort();
+        if (cleaned1.length !== cleaned2.length) {
+            console.log(`❌ Cantidad de documentos no coincide: ${cleaned1.length} en conexion1 vs ${cleaned2.length} en conexion2.`);
+            return;
+        }
 
-            for (let i = 0; i < sortedConn1Docs.length; i++) {
-                if (sortedConn1Docs[i] !== sortedConn2Docs[i]) {
-                    sonIguales = false;
-                    break;
-                }
+        // Ordena para comparar en el mismo orden
+        cleaned1.sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
+        cleaned2.sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
+
+        let sonIguales = true;
+        for (let i = 0; i < cleaned1.length; i++) {
+            if (!isEqual(cleaned1[i], cleaned2[i])) {
+                console.log(`❌ Diferencia encontrada en índice ${i}`);
+                console.log('FID origen:', doc1.fid);
+                console.log('FID destino:', doc2.fid);
+                console.log('Documento origen:', doc1);
+                console.log('Documento destino:', doc2);
             }
+        }
 
-            if (sonIguales) {
-                console.log('🎉 ¡Felicidades! Los documentos en ambas conexiones son IGUALES. Tus esquemas de NestJS funcionan correctamente.');
-            } else {
-                console.log('⚠️ Los documentos en ambas conexiones son DIFERENTES. Revisa tu lógica en NestJS o la base de datos de destino.');
-            }
+        if (sonIguales) {
+            console.log('🎉 ¡Todo correcto! Los documentos son IGUALES en ambas conexiones.');
         } else {
-            console.log(`❌ Las cantidades de documentos no coinciden: Conexion1 tiene ${conn1Docs.length} y Conexion2 tiene ${conn2Docs.length}.`);
+            console.log('⚠️ Hay diferencias entre las bases. Revisa la salida para más detalles.');
         }
 
     } catch (err) {
-        console.error('❌ ¡Ocurrió un error!', err);
-        // Detalles adicionales del error si es de axios
-        if (axios.isAxiosError(err) && err.response) {
-            console.error('Detalles de la respuesta de la API:', err.response.data);
-            console.error('Código de estado de la API:', err.response.status);
-            console.error('Encabezados de la API:', err.response.headers);
-        }
+        console.error('❌ Error general:', err);
     }
 }
 
