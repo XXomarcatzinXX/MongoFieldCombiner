@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 const MONGO_URI = 'mongodb://localhost:27017/tds_restaurada';
-const COLECCION = 'workerTypes';
+const COLECCION = 'directives';
 
 // ❌ Campos que NO deben aparecer en el schema final
-const EXCLUDE_FIELDS = [
-]
+const EXCLUDE_FIELDS = [];
 
 // 🛠️ Campos que deben forzarse como arreglo con objeto vacío [{}]
 const EXCLUDED_ARRAY_OBJECT_FIELDS = ['i', 'ir'];
@@ -43,10 +42,18 @@ async function run() {
                 if (obj[key] === null || obj[key] === undefined) {
                     if (!(key in target)) target[key] = null;
                 } else if (Array.isArray(obj[key])) {
-                    if (!(key in target)) target[key] = [];
-                } else if (typeof obj[key] === 'object') {
-                    if (!(key in target)) target[key] = {};
-                    mergeFields(obj[key], target[key])
+                    if (!(key in target)) {
+                        target[key] = [];
+                    } else if (!Array.isArray(target[key])) { // Asegurar que target[key] es un array si existe
+                        target[key] = [];
+                    }
+                } else if (typeof obj[key] === 'object' && obj[key] !== null) { // Añadir verificación de null para obj[key]
+                    if (!(key in target)) {
+                        target[key] = {};
+                    } else if (typeof target[key] !== 'object' || target[key] === null || Array.isArray(target[key])) { // Asegurar que target[key] es un objeto si existe y no es null o un array
+                        target[key] = {};
+                    }
+                    mergeFields(obj[key], target[key]);
                 } else {
                     if (!(key in target)) target[key] = obj[key];
                 }
@@ -57,8 +64,8 @@ async function run() {
             mergeFields(doc, combined);
         }
 
-        fs.writeFileSync('workerTypes.json', JSON.stringify(combined, null, 2));
-        console.log(`✅ Generado schema_combinado.json con ${Object.keys(combined).length} campos únicos`);
+        fs.writeFileSync('directives.json', JSON.stringify(combined, null, 2));
+        console.log(`✅ Generado el json con ${Object.keys(combined).length} campos únicos`);
 
         await mongoose.disconnect();
     } catch (err) {

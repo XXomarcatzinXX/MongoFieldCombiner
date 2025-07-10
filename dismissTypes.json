@@ -1,0 +1,19 @@
+{
+  "name": "1-Término del contrato",
+  "humansiteCode": 1,
+  "created": {
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "onBehalfOf": "tds",
+    "atTime": 1659711189829,
+    "fromIP": "45.231.169.206"
+  },
+  "uid": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+  "defaultStatus": 4,
+  "disableNotification": true,
+  "updated": {
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "onBehalfOf": "tds",
+    "atTime": 1667932207036,
+    "fromIP": "45.231.169.206"
+  }
+}

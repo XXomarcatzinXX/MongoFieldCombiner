@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const INPUT_JSON = './workerTypes.json'; // Ruta a tu JSON de entrada
-const CLASS_NAME = 'WorkerType'; // Puedes personalizar esto
+const INPUT_JSON = './directives.json'; // Ruta a tu JSON de entrada
+const CLASS_NAME = 'Directive'; // Puedes personalizar esto
 
 function getType(value) {
     if (value === null) return 'any';
@@ -76,7 +76,7 @@ function generateNestSchema(jsonData) {
         const json = JSON.parse(raw);
 
         const content = generateNestSchema(json);
-        const outFile = path.join(process.cwd(), 'workerTypes.schema.ts');
+        const outFile = path.join(process.cwd(), 'directives.schema.ts');
         await fs.promises.writeFile(outFile, content, 'utf8');
 
         console.log(`✅ Esquema generado en: ${outFile}`);

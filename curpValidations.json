@@ -1,0 +1,16 @@
+{
+  "curp": "ROMF030611HPLJRLA6",
+  "paternalSurname": "ROJAS",
+  "maternalSurname": "MORALES",
+  "name": "FELIX",
+  "gender": "H",
+  "birthDate": "2003-06-11",
+  "Nationality": "MEX",
+  "DocProbatorio": 1,
+  "AnioReg": 2003,
+  "numberActa": 34,
+  "NumEntidadReg": 21,
+  "CveMunicipioReg": 74,
+  "StatusCurp": "AN",
+  "exist": false
+}

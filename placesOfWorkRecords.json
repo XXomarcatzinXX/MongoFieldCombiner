@@ -1,0 +1,39 @@
+{
+  "name": "CANCUN",
+  "geoZone_id": "57ae31a2747e9b113494a9cc",
+  "state_id": "5818c76c43d0d31cb41d9ef4",
+  "humansiteCode": 1,
+  "isn": 4,
+  "uid": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+  "updated": {
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "onBehalfOf": "tds",
+    "atTime": 1672779664395,
+    "fromIP": "45.231.169.206"
+  },
+  "discountIsn": true,
+  "employeePromotionPercent": 35,
+  "accFields": {
+    "cyvret": "0003",
+    "cyvpat": "0003",
+    "ifae": "0001",
+    "retirament": "0003",
+    "isn": "0003",
+    "imsspat": "0003",
+    "imssret": "0003",
+    "creditinf": "0003",
+    "infonavit": "0003",
+    "perceptiong": "0001",
+    "perception": "0001",
+    "isr": "1111",
+    "sueldo": "0003",
+    "SUELDO": "0001"
+  },
+  "center": "tds",
+  "created": {
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "onBehalfOf": "tds",
+    "atTime": 1581014596805,
+    "fromIP": "0.0.0.0"
+  }
+}

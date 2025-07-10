@@ -1,0 +1,41 @@
+{
+  "center": "tds",
+  "constantType": "customField",
+  "created": {
+    "atTime": 1622145822822,
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "fromIP": "45.231.169.206",
+    "onBehalfOf": "tds"
+  },
+  "customField": {
+    "key": "savingFundPercent",
+    "name": "PORCENTAJE DE FONDO DE AHORRO",
+    "value": 6
+  },
+  "itemId": "-MXm_HDsFlAXn4N416bW",
+  "name": "SINDICALIZADO_MANTENIMIENTO",
+  "payroll": "-MK7R34DM3EhRNpB5Na8",
+  "queueTime": 1734444395700,
+  "type": "cc",
+  "updated": {
+    "atTime": 1685384696446,
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "fromIP": "45.231.169.206",
+    "onBehalfOf": "tds"
+  },
+  "updatedByFix": 1734444392430,
+  "fid": "-MajQE6fvsUCPlvOZjXk",
+  "automaticApply": {
+    "each": "period",
+    "value": "1",
+    "from": 1613451600000,
+    "to": 1830229200000
+  },
+  "incidencesType": "-MXhY_tbMc84jhmtKH_b",
+  "notApply": {
+    "automatic": true,
+    "fast": true,
+    "manual": true
+  },
+  "cc": "-LXBYl4u2frQTnP2lAKZ"
+}

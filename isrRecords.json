@@ -1,0 +1,21 @@
+{
+  "year": 2019,
+  "lowerLimit": 0.01,
+  "upperLimit": 578.52,
+  "percentFee": 1.92,
+  "fixedFee": 0,
+  "type": "monthly",
+  "uid": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+  "created": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "tds",
+    "atTime": 1610461481619,
+    "fromIP": "45.231.169.206"
+  },
+  "updated": {
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "onBehalfOf": "tds",
+    "atTime": 1610462312687,
+    "fromIP": "45.231.169.206"
+  }
+}

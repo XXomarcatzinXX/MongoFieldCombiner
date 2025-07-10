@@ -1,0 +1,18 @@
+{
+  "year": 2019,
+  "fixedFee": 20.4,
+  "ensuredExcess": 0.4,
+  "bossExcess": 1.1,
+  "bossBenefits": 0.7,
+  "ensuredBenefits": 0.25,
+  "gmpBoss": 1.05,
+  "gmpEnsured": 0.375,
+  "ivaBoss": 1.75,
+  "ivaEnsured": 0.625,
+  "daycare": 1,
+  "retirement": 2,
+  "cyvBoss": 3.15,
+  "cyvEnsured": 1.125,
+  "infonavit": 5,
+  "uid": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983"
+}

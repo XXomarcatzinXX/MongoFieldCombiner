@@ -1,0 +1,10 @@
+{
+  "_id": "001PR",
+  "name": "CALCULO DE SUELDO REAL",
+  "process": "real",
+  "uid": "qxoKL75Oc3anlXNtyjZ1MzTtPFP2",
+  "processes": {
+    "REAL": true,
+    "FISCAL": true
+  }
+}

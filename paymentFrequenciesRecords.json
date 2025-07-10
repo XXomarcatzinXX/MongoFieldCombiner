@@ -1,0 +1,14 @@
+{
+  "name": "SEMANAL",
+  "days": 7,
+  "mensualizationFactor": 30.4,
+  "otherCharges": 17.5,
+  "uid": "uDQgKe1WClWBlOpvVI5xzInTA1Z2",
+  "updated": {
+    "by": "uDQgKe1WClWBlOpvVI5xzInTA1Z2",
+    "onBehalfOf": "tds",
+    "atTime": 1615222277172,
+    "fromIP": "45.231.169.206"
+  },
+  "satCode": "02"
+}

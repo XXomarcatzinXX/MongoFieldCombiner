@@ -1,0 +1,21 @@
+{
+  "year": 2019,
+  "lowerLimit": 0.01,
+  "upperLimit": 1768.96,
+  "subsidy": 407.02,
+  "uid": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+  "type": "monthly",
+  "created": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "integratio",
+    "atTime": 1672253770753,
+    "fromIP": "45.231.169.206"
+  },
+  "center": "tds",
+  "updated": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "integratio",
+    "atTime": 1715300197419,
+    "fromIP": "187.155.229.13"
+  }
+}

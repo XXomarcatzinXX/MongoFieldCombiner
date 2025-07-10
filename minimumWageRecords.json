@@ -1,0 +1,27 @@
+{
+  "year": 2017,
+  "A": 80.04,
+  "B": 80.04,
+  "UMA": 75.49,
+  "values": {
+    "A": 80.04,
+    "B": 80.04,
+    "ZONA-FRONTERIZA": 213.39
+  },
+  "applicationDate": 1483246800000,
+  "updated": {
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "onBehalfOf": "tds",
+    "atTime": 1580673053272,
+    "fromIP": "0.0.0.0"
+  },
+  "uid": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+  "NFD": 82.22,
+  "created": {
+    "by": "qt0buZ37FMXHsp4ehesaNxOt5zF2",
+    "onBehalfOf": "tds",
+    "atTime": 1609381854192,
+    "fromIP": "186.96.20.12"
+  },
+  "center": "integratio"
+}
