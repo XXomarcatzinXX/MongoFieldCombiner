@@ -1,0 +1,41 @@
+{
+  "type": "contract",
+  "center": "tds",
+  "employee": "-N1nfwotTgxOkukE5Ln5",
+  "employeeName": "AVIÑA GONZALEZ VERONICA LYV",
+  "employeeNss": "94968001837",
+  "payroll": "-MuCY1b0gdzYvHIz8jma",
+  "documentType": "626972c7a52372ed4d19e6e1",
+  "startDate": 1651813200000,
+  "created": {
+    "by": "C62ruAFZogfNTpgj726dXse4pPl2",
+    "onBehalfOf": "tds",
+    "atTime": 1652801632586,
+    "fromIP": "45.231.169.206"
+  },
+  "uid": "C62ruAFZogfNTpgj726dXse4pPl2",
+  "content": "skosnksn",
+  "active": true,
+  "endDate": 1655269200000,
+  "duration": 30,
+  "comments": "SOLICITARONELCONTRATOPOR90DIAS",
+  "updated": {
+    "by": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+    "onBehalfOf": "tds",
+    "atTime": 1660234379930,
+    "fromIP": "45.231.169.206"
+  },
+  "motive": "nature",
+  "signed": true,
+  "motiveFrom": "CANTE RIOS GUADALUPE EVELYN",
+  "domicilioBeneficiario": "DOMICILIO PENDIENTE",
+  "jornadaLaboralDiaria": 8,
+  "inicioPrimerTurno": "08:00",
+  "finPrimerTurno": "14:00",
+  "inicioSegundoTurno": "16:00",
+  "finSegundoTurno": "20:00",
+  "inicioComida": "14:00",
+  "finComida": "16:00",
+  "diaDeDescanso": "DOMINGO",
+  "diaDePago": "MIERCOLES"
+}

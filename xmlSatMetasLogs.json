@@ -1,0 +1,17 @@
+{
+  "xmlStatus": "emitted",
+  "companiesRecordId": "-Mxq2dJ_XDnhZTq-mlur",
+  "center": "integratio",
+  "status": 2,
+  "endDate": 1722488400000,
+  "endFormat": "01-08-2024",
+  "uid": "HIwnMFYlybM2XA3mYLcnYGFnUzA3",
+  "startDate": 1719550800000,
+  "error": "Cannot open private key: error:0D0680A8:asn1 encoding routines:asn1_check_tlen:wrong tag",
+  "updated": "21-08-2024 13:46:10",
+  "updatedMilli": 1724265970853,
+  "startFormat": "28-06-2024",
+  "requestId": "6b06e828-0090-4684-a882-e31b74eaeb53",
+  "responseIds": [],
+  "processed": []
+}

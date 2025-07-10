@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const INPUT_JSON = './directives.json'; // Ruta a tu JSON de entrada
-const CLASS_NAME = 'Directive'; // Puedes personalizar esto
+const INPUT_JSON = './xmlSatMetasLogs.json'; // Ruta a tu JSON de entrada
+const CLASS_NAME = 'XmlSatMetasLog'; // Puedes personalizar esto
 
 function getType(value) {
     if (value === null) return 'any';
@@ -76,7 +76,7 @@ function generateNestSchema(jsonData) {
         const json = JSON.parse(raw);
 
         const content = generateNestSchema(json);
-        const outFile = path.join(process.cwd(), 'directives.schema.ts');
+        const outFile = path.join(process.cwd(), 'xmlSatMetasLogs.schema.ts');
         await fs.promises.writeFile(outFile, content, 'utf8');
 
         console.log(`✅ Esquema generado en: ${outFile}`);

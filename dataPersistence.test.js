@@ -4,7 +4,7 @@ const isEqual = require('lodash.isequal'); // Asegúrate de instalar: npm instal
 
 const conexion1 = 'mongodb://localhost:27017/tds_restaurada';
 const conexion2 = 'mongodb://localhost:27017/tds_replica';
-const collection = 'directives';
+const collection = 'xmlSatMetasLogs';
 const nestJsApiUrl = 'http://localhost:3002/employees/testSchemas';
 const accessToken = 'ZN7IM9ME83ZPL9JK';
 const BATCH_SIZE = 70;

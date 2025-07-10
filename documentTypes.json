@@ -1,0 +1,27 @@
+{
+  "fields": [],
+  "firm": "global",
+  "type": "contract",
+  "name": "CONTRATO INDETERMINADO (TDS)",
+  "contentType": "template",
+  "styles": "sokks",
+  "created": {
+    "by": "CKJqdwwicNNzUacAcRjmoMLUkV53",
+    "onBehalfOf": "tds",
+    "atTime": 1650294868469,
+    "fromIP": "::1"
+  },
+  "uid": "EcNF0jkzrwgnccOftak61QUUqXm2",
+  "updated": {
+    "by": "EcNF0jkzrwgnccOftak61QUUqXm2",
+    "onBehalfOf": "tds",
+    "atTime": 1718809544186,
+    "fromIP": "45.231.169.206"
+  },
+  "satContractType": "01",
+  "key": "indefiniteContract",
+  "center": "tds",
+  "notRequiredFields": [],
+  "editionMode": false,
+  "allowMany": true
+}
