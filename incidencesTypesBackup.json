@@ -1,0 +1,8 @@
+{
+  "name": "SUELDOS, SALARIOS RAYAS Y JORNALES",
+  "sat_code": "001",
+  "internal_code": "001",
+  "allowManual": true,
+  "nature": "perception",
+  "affect": "salary"
+}

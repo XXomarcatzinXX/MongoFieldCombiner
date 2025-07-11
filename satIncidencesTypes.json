@@ -1,0 +1,12 @@
+{
+  "_id": "001",
+  "name": "SUELDOS, SALARIOS RAYAS Y JORNALES",
+  "sat_code": "001",
+  "internal_code": "001",
+  "allowManual": 0,
+  "nature": "perception",
+  "affect": "salary",
+  "uid": "CKJqdwwicNNzUacAcRjmoMLUkV53",
+  "directive": "001",
+  "type": "incidenceType"
+}

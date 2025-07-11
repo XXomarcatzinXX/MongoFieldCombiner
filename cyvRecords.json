@@ -1,0 +1,20 @@
+{
+  "measure": "minimumWage",
+  "upperLimit": 1,
+  "year": 2023,
+  "percentFee": 3.15,
+  "created": {
+    "by": "CKJqdwwicNNzUacAcRjmoMLUkV53",
+    "onBehalfOf": "tds",
+    "atTime": 1670949667689,
+    "fromIP": "::1"
+  },
+  "uid": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+  "updated": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "integratio",
+    "atTime": 1672693523942,
+    "fromIP": "45.231.169.206"
+  },
+  "center": "tds"
+}

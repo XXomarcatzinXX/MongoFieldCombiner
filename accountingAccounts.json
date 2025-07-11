@@ -1,0 +1,23 @@
+{
+  "companiesRecord": "-N8TfppIItEmtAwOTG_v",
+  "payroll": "-N8TlEi1pfMXqXjzUT-W",
+  "debits": [],
+  "created": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "integratio",
+    "atTime": 1744651394871,
+    "fromIP": "45.231.169.206"
+  },
+  "uid": "gva3RWFZfMZjhPrHmXqWHkhoAD73",
+  "center": "integratio",
+  "credits": [],
+  "updated": {
+    "by": "gva3RWFZfMZjhPrHmXqWHkhoAD73",
+    "onBehalfOf": "integratio",
+    "atTime": 1745949038901,
+    "fromIP": "45.231.169.206"
+  },
+  "layoutFields": [],
+  "fileName": "poliza-{Año}-{Periodo}-{Proceso}",
+  "withSeparator": true
+}

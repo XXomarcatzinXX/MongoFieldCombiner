@@ -1,4 +1,10 @@
 {
+  "_id": {
+    "buffer": {
+      "type": "Buffer",
+      "data": []
+    }
+  },
   "xmlStatus": "emitted",
   "companiesRecordId": "-Mxq2dJ_XDnhZTq-mlur",
   "center": "integratio",

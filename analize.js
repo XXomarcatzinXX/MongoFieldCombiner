@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 const MONGO_URI = 'mongodb://localhost:27017/tds_restaurada';
-const COLECCION = 'xmlSatMetasLogs';
+const COLECCION = 'incidencesTypesBackup';
 
 // ❌ Campos que NO deben aparecer en el schema final
 const EXCLUDE_FIELDS = [];
@@ -64,7 +64,7 @@ async function run() {
             mergeFields(doc, combined);
         }
 
-        fs.writeFileSync('xmlSatMetasLogs.json', JSON.stringify(combined, null, 2));
+        fs.writeFileSync('incidencesTypesBackup.json', JSON.stringify(combined, null, 2));
         console.log(`✅ Generado el json con ${Object.keys(combined).length} campos únicos`);
 
         await mongoose.disconnect();

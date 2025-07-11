@@ -1,0 +1,40 @@
+{
+  "name": "BANORTE",
+  "default": 0,
+  "cardCode": "4915,4189",
+  "icon": "/assets/icons/banorte.svg",
+  "fields": [],
+  "uid": "EcNF0jkzrwgnccOftak61QUUqXm2",
+  "hasLayout": true,
+  "allowGenerate": true,
+  "requestNumber": true,
+  "allowRegister": true,
+  "hasLayoutDispersion": true,
+  "updated": {
+    "by": "EcNF0jkzrwgnccOftak61QUUqXm2",
+    "onBehalfOf": "tds",
+    "atTime": 1735922254988,
+    "fromIP": "45.231.169.206"
+  },
+  "satCode": "072",
+  "extraFields": {
+    "santander": "BBANO",
+    "kuspit": "16",
+    "banorte": "072",
+    "azteca": "072",
+    "bancomer": "012",
+    "CAJA POP MEXICAN": "677"
+  },
+  "center": "tds",
+  "fileRoute": "",
+  "accountLength": 11,
+  "fileRouteSpei": "azteca_spei",
+  "emailRegex": "",
+  "created": {
+    "by": "YQ0FiqI0AoTPd9DXoSuPVb9Xk983",
+    "onBehalfOf": "tds",
+    "atTime": 1613167108655,
+    "fromIP": "45.231.169.206"
+  },
+  "santanderCode": ""
+}

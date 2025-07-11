@@ -1,0 +1,21 @@
+{
+  "uuid": "1EFE6D00-0390-461F-B5E3-BB6B317F5423",
+  "sat": true,
+  "satStatus": "ok",
+  "satTotal": 495.99,
+  "satFechaPago": "2023-10-29",
+  "satFechaEmision": "2023-10-27T06:51:21",
+  "system": true,
+  "tdsStatus": "ok",
+  "tdsTotal": "495.99",
+  "tdsFechaPago": "2023-10-29",
+  "tdsPeriod": 44,
+  "tdsAccuDate": 1698037200000,
+  "result": 1,
+  "msg": "ok",
+  "companiesRecord": "-McQLO3LMwfpeirL25ak",
+  "month": 10,
+  "year": 2023,
+  "finishedTime": 1703876273935,
+  "isr": 117.38
+}
